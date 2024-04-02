@@ -1,0 +1,41 @@
+body{
+    background-image: url('img/matrix.gif');
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    border-radius: 20px;
+    border: 2px solid #00FF08;
+    font-family: "Roboto Mono", monospace;
+    color:  #00FF08;
+    text-align: center;
+    align-items: center;
+    background-color: black;
+    margin: 50px auto ;
+    width: 490px;
+}
+
+.botao{
+    font-family: "Roboto Mono", monospace;
+    width: 130px;
+    background-color: black;
+    color: #00FF08;
+    font-size: 20px;
+    border: 2px solid #00FF08;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.jogo{
+    color: #00FF08;
+}
+
+a{
+    color: white;
+}

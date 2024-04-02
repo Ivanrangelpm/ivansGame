@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="jogo.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <p class="jogo">Venha conhecer minha versão da Marise´s Machine: <a href="ivans-machine.html">Aqui</a></p>
+        <div class="container">
+                <h1>Ivan's Game</h1>
+
+                <br><br>
+                <p> <span> Como o jogo funciona? </span> Ao clicar no botão 'Começar' é gerado um número aleatório que precisar ser convertido para Octal, decimal e binario, depois que digitar suas respostasd clique no botão 'corrigir'</p>
+
+                <br><br>
+                <button onclick="comecar()" class="botao">Começar!</button>
+                <h2>Converta o numero <span id="spanNumero">XXX</span> </h2>
+
+                
+                <br><br>
+                <p>Binário: </p><input type="number" name="" id="inp_binario"> 
+                <div id="divBinario"></div>
+                <p>octal: </p><input type="number" name="" id="inp_octal">
+                <div id="divOctal"></div>
+                <p>hexa: </p><input type="number" name="" id="inp_hexa">
+                <div id="divHexa"></div>
+                <br><br>
+
+                <button onclick="corrigir()" class="botao">Corrigir</button>
+        </div>
+
+
+        <script>
+                let decimal = 0;
+                function comecar() {
+
+
+                        let min = 10;
+                        let max = 300;
+                        decimal = Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+                        spanNumero.innerHTML = `${decimal}`
+                }
+
+                function corrigir() {
+                        var RespBinario = Number(inp_binario.value);
+                        var RespOctal = Number(inp_octal.value);
+                        var RespHexa = Number(inp_hexa.value);   
+                        
+                        let octal = decimal.toString(8);
+
+                        let hexadecimal = decimal.toString(16);
+
+                        let binaria = decimal.toString(2);
+
+                        if(RespBinario == binaria){
+                                divBinario.innerHTML = `<h2 style="color: greenyellow;">ACERTOU!</h2>`
+                        }else{
+                                divBinario.innerHTML = `<h2 style="color: red;">ERROU!</h2>`
+                        }
+                        if(respOctal == RespOctal){
+                                divOctal.innerHTML = `<h2 style="color: greenyellow;">ACERTOU!</h2>`
+                        }else{
+                                divOctal.innerHTML = `<h2 style="color: red;">ERROU!</h2>`
+                        }
+                        if(respHexa == hexadecimal ){
+                                divHexa.innerHTML = `<h2 style="color: greenyellow;">ACERTOU!</h2>`
+                        }else{
+                                divHexa.innerHTML = `<h2 style="color: red;">ERROU!</h2>`
+                        }
+
+
+                }
+
+
+        </script>
+</body>
+
+</html>
